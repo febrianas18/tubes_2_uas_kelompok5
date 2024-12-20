@@ -46,7 +46,7 @@ class VoteResponsesModelPost {
         "image": image.toJson(),
       };
 }
-
+//
 class Image {
   String url;
   String description;
