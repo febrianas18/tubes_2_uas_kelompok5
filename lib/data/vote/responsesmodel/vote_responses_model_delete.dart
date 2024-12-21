@@ -2,7 +2,6 @@
 //
 //     final voteResponsesModelDelete = voteResponsesModelDeleteFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 VoteResponsesModelDelete voteResponsesModelDeleteFromJson(String str) => VoteResponsesModelDelete.fromJson(json.decode(str));
