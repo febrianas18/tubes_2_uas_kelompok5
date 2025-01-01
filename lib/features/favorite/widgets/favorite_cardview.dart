@@ -6,42 +6,42 @@ import 'package:tubes_2_uas_kelompok5/data/favorite/responsesmodel/favorite_resp
 class FavoriteCardview extends StatelessWidget{
   final FavoritesResponsesModelGet favorite;
   final VoidCallback onDeleted;
-  const FavoriteCard({super.key, required this.favorite, required this.onDeleted});
+  const FavoriteCardview({super.key, required this.favorite, required this.onDeleted});
 
   @override
   Widget build(BuildContext context) {
     var RoundedRectangleBorder;
     return Card(
-      color: colors.brown,
+      color: Colors.brown,
       elevation: 5,
-      Shape: RoundedRectangleBorder(
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: Column(
-          crossAxisAlignment: crossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "Favorite Id: ${favorite.id}",
               style: TextStyle(
-                color: colors.white,
-                fontsize: 20,
-                fontWheight: FontWheight.bold,
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            const SizeBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               "Tanggal Favorite : ${favorite.createdAt}",
               style: TextStyle(
-                color: colors.white,
-                fontsize: 20,
-                fontWheight: FontWheight.bold,
-          ]
-        )
-      )
-    )
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
-
-}
 }
