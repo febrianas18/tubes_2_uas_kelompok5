@@ -6,8 +6,8 @@ import 'package:tubes_2_uas_kelompok5/data/favorite/responsesmodel/vote_response
 Favorite_responses_model_get.dart;';
 class FavoriteController extends GetxController{
    final FavoriteDatasource _datasource = FavoriteDatasource();
-  RxList<FavoritesResponsesModelGet> vote = <FavoriteResponsesModelGet>[].obs;
-  RxList<VoteResponsesModelGet> searchResults = <FavoriteResponsesModelGet>[].obs;
+  RxList<FavoritesResponsesModelGet> Favorite = <FavoriteResponsesModelGet>[].obs;
+  RxList<FavoriteResponsesModelGet> searchResults = <FavoriteResponsesModelGet>[].obs;
   RxBool isLoading = false.obs;
   @override
   void onInit() {
