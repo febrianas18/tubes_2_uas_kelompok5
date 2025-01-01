@@ -41,3 +41,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+lib/features/favorite/controller/favorite_controller.dart
+lib/features/main/main_menu_screen.dart
+lib/features/main/controller/main_menu_controller.dart
+lib/features/vote/controller/vote_controller.dart
