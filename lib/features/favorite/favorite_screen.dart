@@ -1,13 +1,13 @@
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get_core/src/get_main.dart';
+import 'controller/favorite_controller.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
   
   get controller => null;
-  //final FavoriteController controller = Get.put(FavoriteController());
+  final FavoriteController controller = Get.put(FavoriteController());
   return Scaffold(
     body: SafeArea(
       child: Container(
@@ -17,8 +17,8 @@ class FavoriteScreen extends StatelessWidget {
             _buildHeader(),
           SearchViewWidget(
             hintText: 'Search Favorite',
-            onChanged: (value){
-              //controller.searchFavorite;
+            onSearch: (value){
+              controller.searchFavorite;
             },
           ),
           Expanded(
@@ -36,8 +36,8 @@ class FavoriteScreen extends StatelessWidget {
         ),// Column
       ), // Container
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-         // await controller.fecthFavorite();
+        onPressed: () async {
+          await controller.fecthFavorite();
         },
         child: Icon(Icons.refresh),
         ),
@@ -97,7 +97,7 @@ class FavoriteScreen extends StatelessWidget {
           const SizedBox(height: 16),
           ElevatedButton(
             onPressed: (){
-              // controller.fecthFavorite():
+               controller.fecthFavorite():
             },
             child: const Text('Refresh'),
           ),
@@ -113,7 +113,7 @@ class FavoriteScreen extends StatelessWidget {
         return FavoriteCard(
           favorite: favorite,
           onDeleted:(){
-          // controller.deleteFavorite(favorite.id);
+           controller.deleteFavorite(favorite.id);
           },
         ),
       ),
