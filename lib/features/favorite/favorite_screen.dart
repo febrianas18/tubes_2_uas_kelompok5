@@ -45,7 +45,7 @@ class FavoriteScreen extends StatelessWidget {
         child: Icon(Icons.refresh),
         ),
     );
-  );
+  ),
   Widget _buildHeader(){
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -76,7 +76,7 @@ class FavoriteScreen extends StatelessWidget {
   Widget _buildLoading(){
     return const Center(
       child: CircularProgressIndicator(),
-    );
+    ),
   }
 
   Widget _buildEmptyFavorites(FavoritesController controller){
@@ -100,7 +100,7 @@ class FavoriteScreen extends StatelessWidget {
           const SizedBox(height: 16),
           ElevatedButton(
             onPressed: (){
-              // controller.fecthFavorite():
+               controller.fecthFavorite():
             },
             child: const Text('Refresh'),
           ),
