@@ -70,6 +70,10 @@ class VoteDatasource {
         return null;
         }
       }
+
+  deleteFavorit(int id) {}
+
+  getFavrites() {}
     }
 
   Future<voteResponsesModelSearch?> searchFavourite(int vote_id) async {
