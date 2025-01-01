@@ -11,11 +11,11 @@ class FavoriteScreen extends StatelessWidget {
   return Scaffold(
     body: SafeArea(
       child: Container(
-        color: colors.blue,
+        color: Colors.blue,
         child: Column(
           children:[
             _buildHeader(),
-          SearchViewWIdget(
+          SearchViewWidget(
             hintText: 'Search Favorite',
             onChanged: (value){
               //controller.searchFavorite;
@@ -35,7 +35,7 @@ class FavoriteScreen extends StatelessWidget {
           ],
         ),// Column
       ), // Container
-      floatingActionButton: floatingActionButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: (){
          // await controller.fecthFavorite();
         },
@@ -53,11 +53,11 @@ class FavoriteScreen extends StatelessWidget {
             'Kucing Favorite',
             style: TextStyle(
               fontSize: 24,
-              fontWeight: fontWeight.bold,
+              fontWeight: FontWeight.bold,
               color: Colors.blue,
             ),
           ),
-          sizedBox(height: 8),
+          SizedBox(height: 8),
           Text(
             'Your Favorite cat',
             style: TextStyle(
@@ -79,14 +79,14 @@ class FavoriteScreen extends StatelessWidget {
   Widget _buildEmptyFavorites(FavoritesController controller){
     return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.Center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Icon(
             Icons.favorite_border,
             size: 100,
             color: Colors.blue,
           ),
-          const sizedBox(height: 16),
+          const SizedBox(height: 16),
           Text(
             'No Favorite cat found',
             style: TextStyle(
@@ -94,7 +94,7 @@ class FavoriteScreen extends StatelessWidget {
               color: Colors.blue,
             ),
           ),
-          const sizedBox(height: 16),
+          const SizedBox(height: 16),
           ElevatedButton(
             onPressed: (){
               // controller.fecthFavorite():
