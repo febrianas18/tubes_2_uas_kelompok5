@@ -1,10 +1,10 @@
 import 'package:tubes_2_uas_kelompok5/core/utils/print_log.dart';
 import 'package:tubes_2_uas_kelompok5/core/api_services/dio_module.dart';
 import 'package:tubes_2_uas_kelompok5/core/api_services/endpoint.dart';
-import 'package:tubes_2_uas_kelompok5/responsesmodel/vote_responses_model.dart';
-import 'package:tubes_2_uas_kelompok5/responsesmodel/vote_responses_model_delete.dart';
-import 'package:tubes_2_uas_kelompok5/responsesmodel/vote_responses_model_get.dart';
-import 'package:tubes_2_uas_kelompok5/responsesmodel/vote_responses_model_post.dart';
+import 'package:tubes_2_uas_kelompok5/data/vote/responsesmodel/vote_responses_model.dart';
+import 'package:tubes_2_uas_kelompok5/data/vote/responsesmodel/vote_responses_model_delete.dart';
+import 'package:tubes_2_uas_kelompok5/data/vote/responsesmodel/vote_responses_model_get.dart';
+import 'package:tubes_2_uas_kelompok5/data/vote/responsesmodel/vote_responses_model_post.dart';
 import 'package:tubes_2_uas_kelompok5/core/utils/print_log.dart';
 
 class VoteDatasource {
@@ -12,7 +12,7 @@ class VoteDatasource {
 
   Future<List<VoteResponsesModelGet>> getVote() async {
     try {
-      final response - await _httpManager.restRequest(
+      final response = await _httpManager.restRequest(
         url: ApiConstants.voteGetEndpoint,
         method: HttpMethods.get,
         useAuth: true,
@@ -44,7 +44,7 @@ class VoteDatasource {
   Future<VoteResponsesModelPost?> createFavourite(
       VoteRequestsModel data) async {
     try {
-      final respomse - await _httpManager.restRequest(
+      final response = await _httpManager.restRequest(
         url: ApiConstants.voteGetEndpoint,
         method: HttpMethods.post,
         body: data.toJson()
@@ -66,10 +66,15 @@ class VoteDatasource {
         } else {
           return null;
         }
+        } catch (e) {
+        return null;
+        }
+      }
+    }
 
   Future<voteResponsesModelSearch?> searchFavourite(int vote_id) async {
   try {
-    final respomse - await _httpManager.restRequest(
+    final response = await _httpManager.restRequest(
       url: ApiConstants.voteByIdGetEndpoint(vote_id),
       useAuth: true,
       method: HttpMethods.get,
@@ -85,8 +90,6 @@ class VoteDatasource {
         return null;
         }
       }
-    }
-  }
 
 Future<FavoritesResponsesModelDelete?> deleteFavorite(int favoriteId) async {
   try {
