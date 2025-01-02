@@ -1,7 +1,6 @@
 // To parse this JSON data, do
 //
 //     final favoritesResponsesModelGet = favoritesResponsesModelGetFromJson(jsonString);
-//
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
