@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:tubes_2_uas_kelompok5/core/utils/print_log.dart';
-import 'package:tubes_2_uas_kelompok5/data/favorite/datasource/favorite_datasource.dart';
-import 'package:tubes_2_uas_kelompok5/data/favorite/responsesmodel/favorite_responses_model.dart';
-import 'package:tubes_2_uas_kelompok5/data/vote/datasource/vote_datasource.dart';
-import 'package:tubes_2_uas_kelompok5/data/vote/responsesmodel/vote_responses_model.dart';
+import 'package:tubes2_uas_kelompok/core/utils/print_log.dart';
+import 'package:tubes2_uas_kelompok/data/favorite/datasource/favorite_datasource.dart';
+import 'package:tubes2_uas_kelompok/data/favorite/responsesmodel/favorite_responses_model.dart';
+import 'package:tubes2_uas_kelompok/data/vote/datasource/vote_datasource.dart';
+import 'package:tubes2_uas_kelompok/data/vote/responsesmodel/vote_responses_model.dart';
 
 class VoteController extends GetxController {
   final VoteDatasource _datasource = VoteDatasource();
